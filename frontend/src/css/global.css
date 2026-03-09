@@ -1,0 +1,81 @@
+/* ──────────────────────────────────────────────
+   전역 스타일 (global.css)
+   - variables.css 내용 통합
+   - 모든 페이지 공통 기본값
+────────────────────────────────────────────── */
+
+/* 🎨 전역 변수 */
+:root {
+  /* 색상 */
+  --primary: #007bff;
+  --primary-dark: #005dc1;
+  --bg: #f7f8fa;
+  --text: #222;
+  --gray: #888;
+  --danger: #e74c3c;
+  --success: #2ecc71;
+
+  /* 폰트 */
+  --font-main: system-ui, -apple-system, "Noto Sans KR", sans-serif;
+
+  /* 공간 / 모양 */
+  --radius: 16px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  --gap: 20px;
+}
+
+/* 🧱 기본 리셋 */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* 📐 기본 레이아웃 */
+.container {
+  max-width: 960px;
+  max-height: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 🪧 카드 공통 */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+/* 🔘 버튼 기본 */
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ♿ 접근성: 모션 최소화 선호 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

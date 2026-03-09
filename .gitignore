@@ -1,0 +1,23 @@
+# node
+node_modules/
+
+# python
+__pycache__/
+*.pyc
+
+# env
+.env
+
+# media files
+*.mp3
+*.mp4
+*.wav
+*.txt
+*.srt
+
+# output folders
+backend/TestDB/
+
+# build
+build/
+dist/

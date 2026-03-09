@@ -1,0 +1,110 @@
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+}
+
+.mediaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.cover {
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  background: #f3f4f6;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.coverImg {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.fileName {
+  max-width: 680px;
+  font-size: 14px;
+  color: #374151;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.narrowWrap {
+  width: min(640px, 100%);
+  margin: 0 auto;
+}
+
+/* 오디오 */
+.audio {
+  width: 100%;
+  outline: none;
+}
+
+.audioPlaceholder {
+  width: 100%;
+  padding: 14px 12px;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+  text-align: center;
+  color: #6b7280;
+  background: #fafafa;
+}
+
+/* 진행률 */
+.progressWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.progressLabel {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.nextBtn {
+  margin-top: 14px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.nextBtn:hover {
+  background: var(--primary-dark);
+}
+
+@media (max-width: 480px) {
+  .cover {
+    width: 180px;
+    height: 180px;
+  }
+  .narrowWrap {
+    width: min(460px, 95%);
+  }
+}

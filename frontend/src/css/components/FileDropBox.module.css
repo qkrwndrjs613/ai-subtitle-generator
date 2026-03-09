@@ -1,0 +1,29 @@
+/* src/components/FileDropBox.module.css */
+
+.box {
+  border: 2px dashed #ccc;
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  background: #fafafa;
+  color: #666;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.box:hover {
+  background: #f0f8ff;
+  border-color: var(--primary);
+  color: #333;
+}
+
+.active {
+  border-color: var(--primary);
+  background: #e6f0ff;
+  color: #222;
+}
+
+.text {
+  font-size: 15px;
+  user-select: none;
+}

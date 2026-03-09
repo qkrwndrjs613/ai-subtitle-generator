@@ -1,0 +1,132 @@
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  padding: 24px 24px 18px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.meta {
+  margin-top: 6px;
+  color: #6b7280; /* gray-500 */
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.squareBox {
+  background: #f9fafb; /* gray-50 */
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 360px;
+  border: none;
+  resize: vertical;
+  outline: none;
+  background: transparent;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #111827; /* gray-900 */
+}
+
+.miniActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: auto; /* 왼쪽 그룹 */
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;          /* 오른쪽 그룹 */
+}
+
+/* Buttons */
+.primary {
+  background: #2563eb;          /* blue-600 */
+  color: #fff;
+  border: 1px solid #1d4ed8;    /* blue-700 */
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .12s ease, background .12s ease;
+}
+.primary:hover { background: #1d4ed8; }
+.primary:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.ghost {
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .12s ease, background .12s ease;
+}
+.ghost:hover { background: #f3f4f6; }
+.ghost:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.select {
+  padding: 9px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+  color: #111827;
+}
+
+/* Error text */
+.error {
+  margin-top: 8px;
+  text-align: right;
+  color: #dc2626; /* red-600 */
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .miniActions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .leftGroup, .rightGroup {
+    margin-right: 0;
+    justify-content: space-between;
+  }
+}
